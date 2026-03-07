@@ -1,0 +1,9 @@
+backup/
+docs/
+.git/
+__pycache__/
+*.pyc
+.env.example
+CLAUDE.md
+add_document.py
+.DS_Store

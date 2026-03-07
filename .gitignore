@@ -1,0 +1,40 @@
+# Environment
+.env
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# FAISS vector store (generated, large binary files)
+faiss_db/
+
+# Backup vector stores
+backup/
+
+# Processed document records
+docs/
+
+# Course materials (not committed)
+course_materials/
+
+# Google OAuth credentials
+client_secret*.json
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Streamlit
+.streamlit/secrets.toml
+
+
+CLAUDE.md

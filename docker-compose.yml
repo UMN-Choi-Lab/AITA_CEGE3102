@@ -1,0 +1,10 @@
+services:
+  aita:
+    build: .
+    ports:
+      - "30001:8501"
+    env_file:
+      - .env
+    volumes:
+      - /data2/aita_3102:/app/data
+    restart: unless-stopped
