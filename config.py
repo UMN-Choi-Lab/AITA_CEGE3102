@@ -7,7 +7,11 @@ from aita_core import CourseConfig
 load_dotenv()
 
 BASE_DIR = os.path.dirname(__file__)
-_client_secret_matches = glob.glob(os.path.join(BASE_DIR, "client_secret*.json"))
+_explicit_secret = os.getenv("GOOGLE_CLIENT_SECRET_FILE", "")
+if _explicit_secret:
+    _client_secret_matches = [os.path.join(BASE_DIR, _explicit_secret)] if os.path.exists(os.path.join(BASE_DIR, _explicit_secret)) else []
+else:
+    _client_secret_matches = glob.glob(os.path.join(BASE_DIR, "client_secret*.json"))
 
 # Google Auth requires: client_secret file + GOOGLE_COOKIE_KEY + GOOGLE_REDIRECT_URI
 _google_cookie_key = os.getenv("GOOGLE_COOKIE_KEY")
@@ -69,6 +73,7 @@ CONFIG = CourseConfig(
         "concepts for **CEGE 3102: Uncertainty and Decision Analysis**."
     ),
     system_prompt=SYSTEM_PROMPT,
+    semester_start="2026-01-20",
     week_topics={
         1:  ["Fundamentals of probability"],
         2:  ["Fundamentals of probability", "Conditional probability"],
@@ -103,6 +108,11 @@ CONFIG = CourseConfig(
         "Quiz 5 ": 7, "Quiz 6 ": 8, "Quiz 7 ": 9, "Quiz 8 ": 11,
         "Quiz 9 ": 12, "Quiz 10": 13, "Quiz 11": 14,
         "Midterm 1": 8, "Midterm 2": 12, "Final exam": 15,
+    },
+    exam_scope={
+        "Midterm 1": {"week_start": 1, "week_end": 7},
+        "Midterm 2": {"week_start": 8, "week_end": 11},
+        "Final": {"week_start": 1, "week_end": 15},
     },
     example_prompts={
         1: [
@@ -203,6 +213,7 @@ CONFIG = CourseConfig(
     backup_dir=os.path.join(BASE_DIR, "backup"),
     data_dir=os.getenv("AITA_DATA_DIR", os.path.join(BASE_DIR, "data")),
     admin_password=os.getenv("ADMIN_PASSWORD", ""),
+    admin_emails=["chois@umn.edu", "mlevin@umn.edu"],
     cookie_name="aita_3102_auth",
     cookie_key=_google_cookie_key or "",
     redirect_uri=_google_redirect_uri or "http://localhost:30001",
