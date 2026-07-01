@@ -3,7 +3,11 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # Install dependencies
+# aita-core is not on PyPI — install the vendored wheel first (pulls google-genai etc.),
+# then the rest of requirements (aita-core>=0.6.0 is then already satisfied).
 COPY requirements.txt .
+COPY aita_core-*.whl ./
+RUN pip install --no-cache-dir aita_core-*.whl && rm -f aita_core-*.whl
 RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install --no-cache-dir pymupdf
 

@@ -38,3 +38,6 @@ client_secret*.json
 
 
 CLAUDE.md
+
+# Pre-optimization config backup (git history is the real backup)
+*.bak_preopt

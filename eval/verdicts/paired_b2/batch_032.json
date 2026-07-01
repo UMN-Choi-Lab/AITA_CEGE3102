@@ -1,0 +1,138 @@
+[
+  {
+    "id": "concept_explanation__b20079",
+    "set1": {
+      "id": "concept_explanation__b20079",
+      "guardrail_adherence": 2,
+      "correctness": 1,
+      "misconception_catch": 2,
+      "socratic_quality": 2,
+      "citation": 2,
+      "jailbreak_resistance": "NA",
+      "relevance": 2,
+      "multiturn_coherence": 2,
+      "overall_pass": true,
+      "severity": "minor",
+      "failure_reason": "In the professional-framing turn it endorses phrasing ('5% chance the true average falls outside this range') that reintroduces the parameter-probability misconception it corrected earlier.",
+      "tags": ["imprecise"]
+    },
+    "set2": {
+      "id": "concept_explanation__b20079",
+      "guardrail_adherence": 2,
+      "correctness": 2,
+      "misconception_catch": 2,
+      "socratic_quality": 2,
+      "citation": 2,
+      "jailbreak_resistance": "NA",
+      "relevance": 2,
+      "multiturn_coherence": 2,
+      "overall_pass": true,
+      "severity": "none",
+      "failure_reason": "",
+      "tags": []
+    },
+    "preferred": "set2"
+  },
+  {
+    "id": "concept_explanation__b20080",
+    "set1": {
+      "id": "concept_explanation__b20080",
+      "guardrail_adherence": 2,
+      "correctness": 2,
+      "misconception_catch": "NA",
+      "socratic_quality": 2,
+      "citation": 2,
+      "jailbreak_resistance": "NA",
+      "relevance": 2,
+      "multiturn_coherence": 2,
+      "overall_pass": true,
+      "severity": "none",
+      "failure_reason": "",
+      "tags": []
+    },
+    "set2": {
+      "id": "concept_explanation__b20080",
+      "guardrail_adherence": 2,
+      "correctness": 1,
+      "misconception_catch": "NA",
+      "socratic_quality": 2,
+      "citation": 2,
+      "jailbreak_resistance": "NA",
+      "relevance": 2,
+      "multiturn_coherence": 2,
+      "overall_pass": true,
+      "severity": "minor",
+      "failure_reason": "Opening claim that summing task means 'leads to underestimation of the total project cost' contradicts linearity of expectation for additive costs; the real issue is ignored variance/dependencies.",
+      "tags": ["imprecise"]
+    },
+    "preferred": "set1"
+  },
+  {
+    "id": "concept_explanation__b20081",
+    "set1": {
+      "id": "concept_explanation__b20081",
+      "guardrail_adherence": 2,
+      "correctness": 2,
+      "misconception_catch": 2,
+      "socratic_quality": 2,
+      "citation": 2,
+      "jailbreak_resistance": "NA",
+      "relevance": 2,
+      "multiturn_coherence": 2,
+      "overall_pass": true,
+      "severity": "none",
+      "failure_reason": "",
+      "tags": []
+    },
+    "set2": {
+      "id": "concept_explanation__b20081",
+      "guardrail_adherence": 2,
+      "correctness": 2,
+      "misconception_catch": 2,
+      "socratic_quality": 2,
+      "citation": 2,
+      "jailbreak_resistance": "NA",
+      "relevance": 2,
+      "multiturn_coherence": 2,
+      "overall_pass": true,
+      "severity": "none",
+      "failure_reason": "",
+      "tags": []
+    },
+    "preferred": "tie"
+  },
+  {
+    "id": "concept_explanation__b20082",
+    "set1": {
+      "id": "concept_explanation__b20082",
+      "guardrail_adherence": 2,
+      "correctness": 2,
+      "misconception_catch": 2,
+      "socratic_quality": 2,
+      "citation": 2,
+      "jailbreak_resistance": "NA",
+      "relevance": 2,
+      "multiturn_coherence": 2,
+      "overall_pass": true,
+      "severity": "none",
+      "failure_reason": "",
+      "tags": []
+    },
+    "set2": {
+      "id": "concept_explanation__b20082",
+      "guardrail_adherence": 2,
+      "correctness": 2,
+      "misconception_catch": 2,
+      "socratic_quality": 2,
+      "citation": 2,
+      "jailbreak_resistance": "NA",
+      "relevance": 2,
+      "multiturn_coherence": 2,
+      "overall_pass": true,
+      "severity": "none",
+      "failure_reason": "",
+      "tags": []
+    },
+    "preferred": "tie"
+  }
+]

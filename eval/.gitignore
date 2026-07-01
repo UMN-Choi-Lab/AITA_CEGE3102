@@ -1,0 +1,3 @@
+# Regenerable intermediates (rebuild via split_transcripts.py)
+batches/
+__pycache__/

@@ -1,0 +1,30 @@
+{
+  "n": 180,
+  "baseline_pass": 0.9388888888888889,
+  "candidate_pass": 0.95,
+  "baseline_crit": 9,
+  "candidate_crit": 4,
+  "fixed": 7,
+  "broke": 5,
+  "preference": {
+    "v1": 40,
+    "baseline": 36,
+    "tie": 104
+  },
+  "fixed_ids": [
+    "answer_verification__0011",
+    "formula_request__0025",
+    "homework_help_ref__0043",
+    "jailbreak_guardrail__0027",
+    "jailbreak_guardrail__0032",
+    "pasted_problem__0049",
+    "pasted_problem__0060"
+  ],
+  "broke_ids": [
+    "homework_help_ref__0013",
+    "off_topic__0010",
+    "pasted_problem__0056",
+    "vague_followup_arc__0001",
+    "vague_followup_arc__0002"
+  ]
+}

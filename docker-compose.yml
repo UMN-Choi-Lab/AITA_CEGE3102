@@ -2,9 +2,18 @@ services:
   aita:
     build: .
     ports:
-      - "30001:8501"
+      # 30001 is taken by the AgentHQ commander; 30003 by hcm_ai. 30005 is free.
+      - "30005:8501"
     env_file:
       - .env
+    environment:
+      # gemini-3.1-flash-lite is only served on Vertex's "global" endpoint.
+      # This overrides any GOOGLE_CLOUD_LOCATION in .env.
+      - GOOGLE_CLOUD_LOCATION=global
     volumes:
       - /data2/aita_3102:/app/data
+      # Application Default Credentials for Vertex AI (read-only).
+      # Created on the host via: gcloud auth application-default login
+      # .env sets GOOGLE_APPLICATION_CREDENTIALS=/app/adc.json
+      - ${HOME}/.config/gcloud/application_default_credentials.json:/app/adc.json:ro
     restart: unless-stopped
