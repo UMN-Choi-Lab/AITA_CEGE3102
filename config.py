@@ -1,29 +1,14 @@
 import os
-import sys
-import glob
+
 from dotenv import load_dotenv
-from aita_core import CourseConfig
+from aita_core import CourseConfig, discover_google_oauth
 
 load_dotenv()
 
 BASE_DIR = os.path.dirname(__file__)
-_explicit_secret = os.getenv("GOOGLE_CLIENT_SECRET_FILE", "")
-if _explicit_secret:
-    _client_secret_matches = [os.path.join(BASE_DIR, _explicit_secret)] if os.path.exists(os.path.join(BASE_DIR, _explicit_secret)) else []
-else:
-    _client_secret_matches = glob.glob(os.path.join(BASE_DIR, "client_secret*.json"))
-
-# Google Auth requires: client_secret file + GOOGLE_COOKIE_KEY + GOOGLE_REDIRECT_URI
-_google_cookie_key = os.getenv("GOOGLE_COOKIE_KEY")
-_google_redirect_uri = os.getenv("GOOGLE_REDIRECT_URI")
-if _client_secret_matches and _google_cookie_key and _google_redirect_uri:
-    _google_client_secret = _client_secret_matches[0]
-else:
-    _google_client_secret = ""
-    if _client_secret_matches:
-        print("[WARN] Google OAuth: client_secret found but GOOGLE_COOKIE_KEY or "
-              "GOOGLE_REDIRECT_URI not set. Falling back to student ID login.",
-              file=sys.stderr)
+# OAuth client-secret discovery + env validation lives in aita_core; it was
+# byte-identical in every course repo.
+_google_client_secret, _google_cookie_key, _google_redirect_uri = discover_google_oauth(BASE_DIR)
 
 SYSTEM_PROMPT = """You are an AI Teaching Assistant for CEGE 3102: Uncertainty and Decision Analysis at the University of Minnesota. The course covers probability and statistics for civil engineering students, taught by Prof. Michael Levin.
 
@@ -67,7 +52,9 @@ CONFIG = CourseConfig(
     course_short_name="CEGE 3102 AITA",
     course_description=(
         "Welcome! This AI assistant helps you learn probability and statistics "
-        "concepts for **CEGE 3102: Uncertainty and Decision Analysis**."
+        "concepts for **CEGE 3102: Uncertainty and Decision Analysis**.\n\n"
+        "📋 **Before you start, please complete the required consent + survey:** "
+        "[open the form](https://forms.gle/uxH5imezZ92wjaa27)"
     ),
     system_prompt=SYSTEM_PROMPT,
     # Week-gating disabled per the instructor (Prof. Levin): the assistant should
@@ -76,6 +63,8 @@ CONFIG = CourseConfig(
     # semester_start / week_topics are still used for the sidebar week display,
     # per-week example prompts, the "this week's homework" hint, and exam scope.
     week_aware=False,
+    # Fed to aita_core's schedule block (independent of week_aware).
+    meeting_pattern="Lectures are Monday; Wednesday sessions carry quizzes and exams.",
     # Fall 2026: first class Wed 9/9; week 1 begins Mon 9/7 (Labor Day).
     semester_start="2026-09-07",
     week_topics={
@@ -216,15 +205,18 @@ CONFIG = CourseConfig(
     },
     # LLM backend: Google Gemini via Vertex AI (ADC) per UMN policy — no OpenAI.
     # Project/region come from the environment so they are not committed.
-    # gemini-3.1-flash-lite keeps cost low; switch llm_model to gemini-3.5-flash
-    # (or a preview model) for higher quality. Embeddings use gemini-embedding-001
-    # at 3072 dims to match the FAISS index width (re-ingest required after switch).
+    # flash-lite keeps cost low. Embeddings use gemini-embedding-001 at 3072 dims to
+    # match the FAISS index width (re-ingest required only if the embedding model changes).
     llm_provider="gemini",
     gcp_project=os.getenv("GOOGLE_CLOUD_PROJECT", ""),
-    # NOTE: gemini-3.1-flash-lite is served only via Vertex's "global" endpoint
+    # NOTE: the flash-lite models are served via Vertex's "global" endpoint
     # (us-central1 returns 404); gemini-embedding-001 works there too.
     gcp_location=os.getenv("GOOGLE_CLOUD_LOCATION", "global"),
-    llm_model="gemini-3.1-flash-lite",
+    # 3.1 -> 3.5 flash-lite after a full 187-scenario paired A/B (Opus judge): 3.5 net-better
+    # (pass 94.7->96.8%, fails 10->6, criticals 3->2, +jailbreak/coherence), same tier/cost,
+    # no re-ingest. Shared weak spot in BOTH models: answer-confirmation under pressure
+    # (a PROMPT lever, not model choice). See eval/report_paired_35fl.json.
+    llm_model="gemini-3.5-flash-lite",
     llm_temperature=0,
     llm_max_output_tokens=2048,
     embedding_model="gemini-embedding-001",
