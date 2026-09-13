@@ -146,7 +146,12 @@ def main():
     ap.add_argument("--retrieval-k", type=int, default=0, help="override retrieval_k (>0)")
     ap.add_argument("--retrieval-min-score", type=float, default=-1.0,
                     help="override retrieval_min_score (>=0); needs aita-core support")
+    ap.add_argument("--model", default="", help="override CONFIG.llm_model (e.g. gemini-3.5-flash-lite)")
     args = ap.parse_args()
+
+    if args.model:
+        CONFIG.llm_model = args.model
+        print(f"[override] llm_model <- {args.model}")
 
     # Optimization-loop overrides (do not mutate committed config.py).
     if args.prompt_file:

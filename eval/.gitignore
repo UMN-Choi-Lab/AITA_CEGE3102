@@ -1,3 +1,11 @@
 # Regenerable intermediates (rebuild via split_transcripts.py)
 batches/
 __pycache__/
+
+# Bulk run output. The harness, prompts, rubric, scenario inputs and the
+# report_*.json summaries stay tracked -- those are the method and the
+# conclusions. These are the raw per-run artifacts that regenerate from them,
+# and they grow by multiple MB every eval campaign.
+transcripts_*.jsonl
+paired_*.jsonl
+verdicts/

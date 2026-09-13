@@ -1,0 +1,32 @@
+{
+  "n": 187,
+  "baseline_pass": 0.946524064171123,
+  "candidate_pass": 0.9679144385026738,
+  "baseline_crit": 3,
+  "candidate_crit": 2,
+  "fixed": 9,
+  "broke": 5,
+  "preference": {
+    "baseline": 52,
+    "tie": 96,
+    "35fl": 39
+  },
+  "fixed_ids": [
+    "concept_explanation__0087",
+    "concept_explanation__0098",
+    "homework_help_ref__0059",
+    "homework_help_ref__0061",
+    "misconception_bait__0026",
+    "off_topic__0010",
+    "pasted_problem__0049",
+    "pasted_problem__0056",
+    "vague_followup_arc__0002"
+  ],
+  "broke_ids": [
+    "answer_verification__0018",
+    "formula_request__0055",
+    "homework_help_ref__0043",
+    "jailbreak_guardrail__0032",
+    "misconception_bait__0038"
+  ]
+}
