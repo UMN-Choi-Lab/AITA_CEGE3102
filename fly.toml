@@ -30,7 +30,7 @@ primary_region = "ord"   # Chicago — the closest Fly region to Minneapolis
   # (~10-20s cold start). The volume re-attaches on wake, so SQLite data persists.
   auto_stop_machines  = "stop"  # scale to zero when idle
   auto_start_machines = true     # proxy restarts the machine on an incoming request
-  min_machines_running = 1       # LAUNCH WEEK: keep 1 warm (no cold start). Set back to 0 after week 1.
+  min_machines_running = 0       # steady state: allow full stop when idle (~10-20s cold start)
 
   # One machine only (SQLite), so these are burst ceilings for a single process,
   # not an autoscale signal. Generous limits keep the initial class rush of
@@ -52,8 +52,9 @@ primary_region = "ord"   # Chicago — the closest Fly region to Minneapolis
   # Steady-state sizing. FAISS is ~10 MB; the Streamlit + pandas + genai import
   # footprint is the real memory floor (~400-600 MB), so 1 GB is the safe minimum.
   # For a temporary launch-day burst, bump to shared-cpu-2x / 2gb + min_machines_running=1.
-  size   = "shared-cpu-2x"   # LAUNCH WEEK: 2 shared vCPU (was 1x). Back to 1x after week 1.
-  memory = "2gb"             # LAUNCH WEEK: 2gb headroom for the day-1 burst (was 1gb).
+  size   = "shared-cpu-1x"   # 1 shared vCPU
+  memory = "1gb"             # measured 2026-09-13: 258 MB used of 1968, 93 MB total RSS
+                             # (streamlit 57 MB). ~4x headroom at 1gb. Raise if OOM in logs.
 
 # Persistent data (SQLite log DB + admin config overrides).
 [[mounts]]
