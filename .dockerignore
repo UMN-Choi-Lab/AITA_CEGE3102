@@ -1,9 +1,29 @@
-backup/
-docs/
+# --- excluded from the Docker build context ---
+# Only what the Dockerfile COPYs needs to reach the builder:
+#   requirements.txt, aita_core-*.whl, config.py, main.py,
+#   client_secret*.json, faiss_db/, course_materials/
 .git/
+.gitignore
 __pycache__/
 *.pyc
-.env.example
-CLAUDE.md
-add_document.py
 .DS_Store
+
+# Secrets / local env — never ship into the build context
+.env
+*.bak_preopt
+
+# Docs, tooling, and dev assets not needed in the image
+CLAUDE.md
+README.md
+DEPLOY.md
+STUDENT_UX_PLAN.md
+.env.example
+.claude/
+add_document.py
+scripts/
+eval/
+backup/
+docs/
+
+# Fly config (consumed by flyctl on the host, not needed inside the image)
+fly.toml

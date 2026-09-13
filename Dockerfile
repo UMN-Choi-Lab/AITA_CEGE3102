@@ -12,7 +12,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install --no-cache-dir pymupdf
 
 # Copy application code
-COPY config.py main.py ./
+COPY config.py main.py entrypoint.sh ./
+RUN chmod +x entrypoint.sh
 
 # Copy Google OAuth credentials if present (optional)
 COPY client_secret*.json* ./
@@ -32,4 +33,4 @@ RUN echo '[server]\nheadless = true\nport = 8501\nenableCORS = false\nenableXsrf
 
 EXPOSE 8501
 
-ENTRYPOINT ["streamlit", "run", "main.py", "--server.port=8501", "--server.address=0.0.0.0"]
+ENTRYPOINT ["/app/entrypoint.sh"]

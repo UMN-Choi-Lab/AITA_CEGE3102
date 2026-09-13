@@ -1,0 +1,71 @@
+# fly.toml — CEGE 3102 AI Teaching Assistant
+# Docs: https://fly.io/docs/reference/configuration/
+#
+# One always-on machine. SQLite (aita.db) + config_overrides.json live on a single
+# Fly volume, so this app must NOT be scaled past one machine (volumes are
+# single-attach and SQLite has no multi-writer story). For a course of ~30-100
+# students one shared-cpu machine is plenty.
+
+app            = "cege-3102-aita"
+primary_region = "ord"   # Chicago — the closest Fly region to Minneapolis
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  AITA_DATA_DIR = "/app/data"
+  # LLM backend = Vertex AI (OAuth via a service account — no API key).
+  # config.py switches to Vertex because GOOGLE_CLOUD_PROJECT is set. The SA key
+  # arrives as the base64 Fly secret GCP_SA_KEY and main.py writes it to the path
+  # below before the Vertex client initializes.
+  GOOGLE_CLOUD_PROJECT = "aita-489419"
+  GOOGLE_CLOUD_LOCATION = "global"   # gemini-3.1-flash-lite is served on Vertex's global endpoint
+  GOOGLE_APPLICATION_CREDENTIALS = "/app/adc.json"
+
+[http_service]
+  internal_port       = 8501
+  force_https         = true    # OAuth redirect + auth cookie require HTTPS
+  # Cost-optimized for steady-state course use (launch burst is past). The single
+  # machine sleeps when idle and the Fly proxy wakes it on the next request
+  # (~10-20s cold start). The volume re-attaches on wake, so SQLite data persists.
+  auto_stop_machines  = "stop"  # scale to zero when idle
+  auto_start_machines = true     # proxy restarts the machine on an incoming request
+  min_machines_running = 1       # LAUNCH WEEK: keep 1 warm (no cold start). Set back to 0 after week 1.
+
+  # One machine only (SQLite), so these are burst ceilings for a single process,
+  # not an autoscale signal. Generous limits keep the initial class rush of
+  # websocket + static-asset requests from being rejected.
+  [http_service.concurrency]
+    type       = "requests"
+    soft_limit = 90
+    hard_limit = 200
+
+  # Streamlit's built-in liveness endpoint returns "ok".
+  [[http_service.checks]]
+    interval     = "15s"
+    timeout      = "2s"
+    grace_period = "30s"
+    method       = "get"
+    path         = "/_stcore/health"
+
+[[vm]]
+  # Steady-state sizing. FAISS is ~10 MB; the Streamlit + pandas + genai import
+  # footprint is the real memory floor (~400-600 MB), so 1 GB is the safe minimum.
+  # For a temporary launch-day burst, bump to shared-cpu-2x / 2gb + min_machines_running=1.
+  size   = "shared-cpu-2x"   # LAUNCH WEEK: 2 shared vCPU (was 1x). Back to 1x after week 1.
+  memory = "2gb"             # LAUNCH WEEK: 2gb headroom for the day-1 burst (was 1gb).
+
+# Persistent data (SQLite log DB + admin config overrides).
+[[mounts]]
+  source      = "aita_data"
+  destination = "/app/data"
+
+# ---------------------------------------------------------------------------
+# Credentials: the app authenticates to Vertex AI with a service-account key,
+# supplied as the base64 Fly secret GCP_SA_KEY:
+#     fly secrets set GCP_SA_KEY="$(base64 -w0 /tmp/aita-489419-XXXX.json)"
+# main.py decodes it to $GOOGLE_APPLICATION_CREDENTIALS (/app/adc.json) at startup.
+#
+# To switch to the Gemini Developer API instead: remove GOOGLE_CLOUD_PROJECT from
+# [env] above, set the GEMINI_API_KEY secret, and drop GCP_SA_KEY.
+# ---------------------------------------------------------------------------
