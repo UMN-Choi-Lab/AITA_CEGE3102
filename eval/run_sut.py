@@ -24,7 +24,14 @@ from aita_core import rag, providers
 from google.genai import types
 
 set_config(CONFIG)
-_sim_client = providers._get_gemini_client(CONFIG)
+_sim_client = None  # lazily built: --replay arms never simulate, so they need no Vertex creds
+
+
+def _sim():
+    global _sim_client
+    if _sim_client is None:
+        _sim_client = providers._get_gemini_client(CONFIG)
+    return _sim_client
 # Student-simulator model. Ideally a DIFFERENT/stronger model than the SUT to avoid
 # monoculture, but gemini-3-flash / 3.1-pro are 404 on this Vertex project, so we use
 # flash-lite (documented limitation). Override with SIM_MODEL env if more models open up.
@@ -73,7 +80,7 @@ def simulate_student(transcript, intent, topic):
               f"Your goal for your NEXT message: {intent}\n\nYour next message:")
 
     def _call(model):
-        r = _sim_client.models.generate_content(
+        r = _sim().models.generate_content(
             model=model,
             contents=[types.Content(role="user", parts=[types.Part.from_text(text=prompt)])],
             config=types.GenerateContentConfig(
@@ -147,11 +154,39 @@ def main():
     ap.add_argument("--retrieval-min-score", type=float, default=-1.0,
                     help="override retrieval_min_score (>=0); needs aita-core support")
     ap.add_argument("--model", default="", help="override CONFIG.llm_model (e.g. gemini-3.5-flash-lite)")
+    ap.add_argument("--provider", default="", choices=["", "gemini", "openai"],
+                    help="override CONFIG.llm_provider; 'openai' + OPENAI_BASE_URL targets the UMN AI Gateway")
+    ap.add_argument("--embedding-model", default="",
+                    help="override CONFIG.embedding_model (a gateway arm must use text-embedding-3-large)")
+    ap.add_argument("--faiss-dir", default="",
+                    help="override CONFIG.faiss_db_dir (a gateway arm needs its own re-embedded index)")
+    ap.add_argument("--extra-param", action="append", default=[], metavar="K=V",
+                    help="extra chat param, repeatable (e.g. reasoning_effort=none for gpt-5.6-luna)")
+    ap.add_argument("--source-balance", default="", choices=["", "guarantee", "cap"],
+                    help="override CONFIG.retrieval_source_balance")
+    ap.add_argument("--resume", action="store_true",
+                    help="skip scenarios already present in --out and append to it")
     args = ap.parse_args()
 
     if args.model:
         CONFIG.llm_model = args.model
         print(f"[override] llm_model <- {args.model}")
+    if args.provider:
+        CONFIG.llm_provider = args.provider
+        print(f"[override] llm_provider <- {args.provider} "
+              f"(base_url={os.getenv('OPENAI_BASE_URL', 'default')})")
+    if args.source_balance:
+        CONFIG.retrieval_source_balance = args.source_balance
+        print(f"[override] retrieval_source_balance <- {args.source_balance}")
+    if args.embedding_model:
+        CONFIG.embedding_model = args.embedding_model
+        print(f"[override] embedding_model <- {args.embedding_model}")
+    if args.faiss_dir:
+        CONFIG.faiss_db_dir = args.faiss_dir
+        print(f"[override] faiss_db_dir <- {args.faiss_dir}")
+    if args.extra_param:
+        CONFIG.llm_extra_params = dict(kv.split("=", 1) for kv in args.extra_param)
+        print(f"[override] llm_extra_params <- {CONFIG.llm_extra_params}")
 
     # Optimization-loop overrides (do not mutate committed config.py).
     if args.prompt_file:
@@ -175,31 +210,39 @@ def main():
     scns = [json.loads(l) for l in open(args.inp) if l.strip()]
     if args.limit:
         scns = scns[:args.limit]
+
+    done_ids = set()
+    if args.resume and os.path.isfile(args.out):
+        done_ids = {json.loads(l)["id"] for l in open(args.out) if l.strip()}
+        scns = [s for s in scns if s["id"] not in done_ids]
+        print(f"[resume] {len(done_ids)} already done, {len(scns)} to go")
     rag._load_index()  # warm the shared index before threads
     print(f"Running {len(scns)} scenarios through {CONFIG.llm_model} @ {CONFIG.gcp_location} "
           f"with {args.workers} workers...")
 
-    results, done, errs = [], 0, 0
+    n_written, done, errs = 0, 0, 0
+    out_f = open(args.out, "a" if (args.resume and done_ids) else "w")
     with ThreadPoolExecutor(max_workers=args.workers) as ex:
         futs = {ex.submit(run_one, s): s for s in scns}
         for fut in as_completed(futs):
             s = futs[fut]
             try:
-                results.append(fut.result())
+                r = fut.result()
             except Exception as e:
                 errs += 1
                 with _print_lock:
-                    print(f"  ERR {s['id']}: {str(e)[:120]}")
+                    print(f"  ERR {s['id']}: {str(e)[:120]}", flush=True)
+            else:
+                with _print_lock:  # one writer at a time; flush so a kill keeps the work
+                    out_f.write(json.dumps(r) + "\n")
+                    out_f.flush()
+                    n_written += 1
             done += 1
             if done % 25 == 0:
                 with _print_lock:
-                    print(f"  {done}/{len(scns)} done ({errs} errors)")
-
-    results.sort(key=lambda r: r["id"])
-    with open(args.out, "w") as f:
-        for r in results:
-            f.write(json.dumps(r) + "\n")
-    print(f"\nWROTE {len(results)} transcripts -> {args.out}  ({errs} errors)")
+                    print(f"  {done}/{len(scns)} done ({errs} errors)", flush=True)
+    out_f.close()
+    print(f"\nWROTE {n_written} transcripts -> {args.out}  ({errs} errors)")
 
 
 if __name__ == "__main__":
