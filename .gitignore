@@ -41,3 +41,7 @@ CLAUDE.md
 
 # Pre-optimization config backup (git history is the real backup)
 *.bak_preopt
+# Weekly monitoring output: regenerable, and contains verbatim student questions
+# + usernames. The generator (monitoring/weekly_report.py) IS tracked.
+monitoring/*.md
+monitoring/cron.log
