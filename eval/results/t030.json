@@ -1,0 +1,587 @@
+[
+ {
+  "id": "t01",
+  "cat": "topic",
+  "ok": true,
+  "rank": 1,
+  "n": 5,
+  "chars": 10470,
+  "got": [
+   "3 Conditional probability.pdf",
+   "3 Conditional probability.pdf",
+   "3 Conditional probability.pdf",
+   "3 Conditional probability",
+   "3 Conditional probability.pdf"
+  ]
+ },
+ {
+  "id": "t02",
+  "cat": "topic",
+  "ok": true,
+  "rank": 1,
+  "n": 5,
+  "chars": 10420,
+  "got": [
+   "4 Combinatorics.pdf",
+   "4 Combinatorics.pdf",
+   "4 Combinatorics.pdf",
+   "4 Combinatorics",
+   "4 Combinatorics.pdf"
+  ]
+ },
+ {
+  "id": "t03",
+  "cat": "topic",
+  "ok": true,
+  "rank": 4,
+  "n": 5,
+  "chars": 10413,
+  "got": [
+   "7 Continuous RVs",
+   "7 Continuous RVs",
+   "8 Joint distributions",
+   "5 Discrete RVs",
+   "8 Joint distributions"
+  ]
+ },
+ {
+  "id": "t04",
+  "cat": "topic",
+  "ok": true,
+  "rank": 1,
+  "n": 5,
+  "chars": 6614,
+  "got": [
+   "6 Properties of discrete RVs.pdf",
+   "6 Properties of discrete RVs.pdf",
+   "6 Properties of discrete RVs",
+   "6 Properties of discrete RVs",
+   "6 Properties of discrete RVs.pdf"
+  ]
+ },
+ {
+  "id": "t05",
+  "cat": "topic",
+  "ok": true,
+  "rank": 1,
+  "n": 5,
+  "chars": 10432,
+  "got": [
+   "7 Continuous RVs.pdf",
+   "7 Continuous RVs.pdf",
+   "6 Properties of discrete RVs",
+   "7 Continuous RVs.pdf",
+   "7 Continuous RVs"
+  ]
+ },
+ {
+  "id": "t06",
+  "cat": "topic",
+  "ok": true,
+  "rank": 1,
+  "n": 5,
+  "chars": 8914,
+  "got": [
+   "8 Joint distributions.pdf",
+   "8 Joint distributions",
+   "8 Joint distributions.pdf",
+   "8 Joint distributions.pdf",
+   "HW9.pdf"
+  ]
+ },
+ {
+  "id": "t07",
+  "cat": "topic",
+  "ok": true,
+  "rank": 1,
+  "n": 5,
+  "chars": 10490,
+  "got": [
+   "9 Statistics and limit theorems.pdf",
+   "9 Statistics and limit theorems",
+   "9 Statistics and limit theorems",
+   "9 Statistics and limit theorems",
+   "9 Statistics and limit theorems.pdf"
+  ]
+ },
+ {
+  "id": "t08",
+  "cat": "topic",
+  "ok": true,
+  "rank": 1,
+  "n": 5,
+  "chars": 10435,
+  "got": [
+   "10 Point estimation",
+   "10 Point estimation.pdf",
+   "10 Point estimation",
+   "10 Point estimation.pdf",
+   "10 Point estimation.pdf"
+  ]
+ },
+ {
+  "id": "t09",
+  "cat": "topic",
+  "ok": true,
+  "rank": 1,
+  "n": 5,
+  "chars": 10455,
+  "got": [
+   "11 Confidence intervals",
+   "11 Confidence intervals.pdf",
+   "11 Confidence intervals",
+   "11 Confidence intervals.pdf",
+   "11 Confidence intervals.pdf"
+  ]
+ },
+ {
+  "id": "t10",
+  "cat": "topic",
+  "ok": true,
+  "rank": 1,
+  "n": 5,
+  "chars": 9884,
+  "got": [
+   "12 Monte Carlo simulation.pdf",
+   "12 Monte Carlo simulation.pdf",
+   "12 Monte Carlo simulation.pdf",
+   "12 Monte Carlo simulation",
+   "12 Monte Carlo simulation"
+  ]
+ },
+ {
+  "id": "t11",
+  "cat": "topic",
+  "ok": true,
+  "rank": 1,
+  "n": 5,
+  "chars": 8828,
+  "got": [
+   "13 Hypothesis testing.pdf",
+   "13 Hypothesis testing.pdf",
+   "13 Hypothesis testing.pdf",
+   "13 Hypothesis testing",
+   "13 Hypothesis testing"
+  ]
+ },
+ {
+  "id": "t12",
+  "cat": "topic",
+  "ok": true,
+  "rank": 1,
+  "n": 5,
+  "chars": 10435,
+  "got": [
+   "14 Linear regression",
+   "14 Linear regression.pdf",
+   "14 Linear regression.pdf",
+   "14 Linear regression",
+   "14 Linear regression"
+  ]
+ },
+ {
+  "id": "t13",
+  "cat": "topic",
+  "ok": true,
+  "rank": 1,
+  "n": 5,
+  "chars": 10506,
+  "got": [
+   "1 Orientation and descriptive statistics",
+   "1 Orientation and descriptive statistics",
+   "7 Continuous RVs",
+   "1 Orientation and descriptive statistics.pdf",
+   "1 Orientation and descriptive statistics"
+  ]
+ },
+ {
+  "id": "t14",
+  "cat": "topic",
+  "ok": true,
+  "rank": 1,
+  "n": 5,
+  "chars": 10480,
+  "got": [
+   "2 Fundamentals of probability.pdf",
+   "2 Fundamentals of probability",
+   "2 Fundamentals of probability",
+   "2 Fundamentals of probability.pdf",
+   "2 Fundamentals of probability"
+  ]
+ },
+ {
+  "id": "t15",
+  "cat": "topic",
+  "ok": true,
+  "rank": 1,
+  "n": 5,
+  "chars": 10415,
+  "got": [
+   "5 Discrete RVs.pdf",
+   "5 Discrete RVs.pdf",
+   "5 Discrete RVs.pdf",
+   "5 Discrete RVs.pdf",
+   "5 Discrete RVs"
+  ]
+ },
+ {
+  "id": "t16",
+  "cat": "topic",
+  "ok": true,
+  "rank": 1,
+  "n": 5,
+  "chars": 10415,
+  "got": [
+   "7 Continuous RVs.pdf",
+   "7 Continuous RVs",
+   "7 Continuous RVs.pdf",
+   "7 Continuous RVs",
+   "7 Continuous RVs"
+  ]
+ },
+ {
+  "id": "t17",
+  "cat": "topic",
+  "ok": true,
+  "rank": 1,
+  "n": 5,
+  "chars": 10405,
+  "got": [
+   "5 Discrete RVs.pdf",
+   "5 Discrete RVs",
+   "5 Discrete RVs",
+   "5 Discrete RVs.pdf",
+   "5 Discrete RVs"
+  ]
+ },
+ {
+  "id": "t18",
+  "cat": "topic",
+  "ok": true,
+  "rank": 1,
+  "n": 5,
+  "chars": 10433,
+  "got": [
+   "3 Conditional probability",
+   "3 Conditional probability",
+   "5 Discrete RVs",
+   "3 Conditional probability.pdf",
+   "5 Discrete RVs"
+  ]
+ },
+ {
+  "id": "hw01",
+  "cat": "named_hw",
+  "ok": true,
+  "rank": 1,
+  "n": 2,
+  "chars": 1889,
+  "got": [
+   "HW3.pdf",
+   "HW3.pdf"
+  ]
+ },
+ {
+  "id": "hw02",
+  "cat": "named_hw",
+  "ok": true,
+  "rank": 1,
+  "n": 2,
+  "chars": 2756,
+  "got": [
+   "HW5.pdf",
+   "HW5.pdf"
+  ]
+ },
+ {
+  "id": "hw03",
+  "cat": "named_hw",
+  "ok": true,
+  "rank": 1,
+  "n": 2,
+  "chars": 1733,
+  "got": [
+   "HW11.pdf",
+   "HW11.pdf"
+  ]
+ },
+ {
+  "id": "hw04",
+  "cat": "named_hw",
+  "ok": true,
+  "rank": 3,
+  "n": 5,
+  "chars": 8760,
+  "got": [
+   "Syllabus",
+   "Lab 9.pdf",
+   "Lab 7.pdf",
+   "1 Orientation and descriptive statistics.pdf",
+   "Lab 6.pdf"
+  ]
+ },
+ {
+  "id": "hw05",
+  "cat": "named_hw",
+  "ok": true,
+  "rank": 1,
+  "n": 7,
+  "chars": 12198,
+  "got": [
+   "HW2.pdf",
+   "HW2.pdf",
+   "2 Fundamentals of probability.pdf",
+   "2 Fundamentals of probability.pdf",
+   "4 Combinatorics.pdf",
+   "2 Fundamentals of probability",
+   "2 Fundamentals of probability.pdf"
+  ]
+ },
+ {
+  "id": "hw06",
+  "cat": "named_hw",
+  "ok": true,
+  "rank": 2,
+  "n": 5,
+  "chars": 8755,
+  "got": [
+   "Lab 13.pdf",
+   "Lab 12.pdf",
+   "Syllabus",
+   "Syllabus.pdf",
+   "Syllabus"
+  ]
+ },
+ {
+  "id": "cur01",
+  "cat": "current_hw",
+  "ok": true,
+  "rank": 1,
+  "n": 7,
+  "chars": 8989,
+  "got": [
+   "HW9.pdf",
+   "HW9.pdf",
+   "HW8.pdf",
+   "Syllabus",
+   "HW1.pdf",
+   "HW6.pdf",
+   "Syllabus"
+  ]
+ },
+ {
+  "id": "cur02",
+  "cat": "current_hw",
+  "ok": true,
+  "rank": 1,
+  "n": 6,
+  "chars": 7501,
+  "got": [
+   "HW9.pdf",
+   "Writing and submission guidelines",
+   "Syllabus",
+   "Writing and submission guidelines",
+   "HW8.pdf",
+   "HW9.pdf"
+  ]
+ },
+ {
+  "id": "log01",
+  "cat": "logistics",
+  "ok": true,
+  "rank": 1,
+  "n": 5,
+  "chars": 10383,
+  "got": [
+   "Syllabus",
+   "Syllabus.pdf",
+   "1 Orientation and descriptive statistics.pdf",
+   "Syllabus",
+   "Syllabus"
+  ]
+ },
+ {
+  "id": "log02",
+  "cat": "logistics",
+  "ok": true,
+  "rank": 1,
+  "n": 5,
+  "chars": 9312,
+  "got": [
+   "Syllabus",
+   "Syllabus",
+   "Syllabus.pdf",
+   "Writing and submission guidelines",
+   "Syllabus.pdf"
+  ]
+ },
+ {
+  "id": "log03",
+  "cat": "logistics",
+  "ok": true,
+  "rank": 1,
+  "n": 6,
+  "chars": 11297,
+  "got": [
+   "Midterm 1 study guide.pdf",
+   "Midterm 1 study guide.pdf",
+   "Midterm 2 study guide.pdf",
+   "Midterm 2 study guide.pdf",
+   "Final exam study guide.pdf",
+   "Quiz 5 study guide.pdf"
+  ]
+ },
+ {
+  "id": "fu01",
+  "cat": "followup",
+  "ok": true,
+  "rank": 1,
+  "n": 5,
+  "chars": 10465,
+  "got": [
+   "3 Conditional probability.pdf",
+   "3 Conditional probability",
+   "3 Conditional probability.pdf",
+   "3 Conditional probability.pdf",
+   "3 Conditional probability"
+  ]
+ },
+ {
+  "id": "fu02",
+  "cat": "followup",
+  "ok": true,
+  "rank": 1,
+  "n": 5,
+  "chars": 10480,
+  "got": [
+   "9 Statistics and limit theorems",
+   "9 Statistics and limit theorems.pdf",
+   "9 Statistics and limit theorems",
+   "9 Statistics and limit theorems",
+   "13 Hypothesis testing.pdf"
+  ]
+ },
+ {
+  "id": "fu03",
+  "cat": "followup",
+  "ok": true,
+  "rank": 1,
+  "n": 5,
+  "chars": 10460,
+  "got": [
+   "11 Confidence intervals.pdf",
+   "11 Confidence intervals.pdf",
+   "11 Confidence intervals.pdf",
+   "11 Confidence intervals",
+   "11 Confidence intervals.pdf"
+  ]
+ },
+ {
+  "id": "fu04",
+  "cat": "followup",
+  "ok": true,
+  "rank": 1,
+  "n": 5,
+  "chars": 10329,
+  "got": [
+   "6 Properties of discrete RVs.pdf",
+   "6 Properties of discrete RVs.pdf",
+   "5 Discrete RVs.pdf",
+   "6 Properties of discrete RVs",
+   "5 Discrete RVs"
+  ]
+ },
+ {
+  "id": "fu05",
+  "cat": "followup",
+  "ok": true,
+  "rank": 1,
+  "n": 2,
+  "chars": 2983,
+  "got": [
+   "HW3.pdf",
+   "HW3.pdf"
+  ]
+ },
+ {
+  "id": "fu06",
+  "cat": "followup",
+  "ok": true,
+  "rank": 1,
+  "n": 5,
+  "chars": 10435,
+  "got": [
+   "13 Hypothesis testing",
+   "13 Hypothesis testing",
+   "13 Hypothesis testing",
+   "13 Hypothesis testing.pdf",
+   "13 Hypothesis testing"
+  ]
+ },
+ {
+  "id": "fu07",
+  "cat": "followup",
+  "ok": true,
+  "rank": 1,
+  "n": 5,
+  "chars": 10445,
+  "got": [
+   "14 Linear regression",
+   "14 Linear regression.pdf",
+   "14 Linear regression.pdf",
+   "14 Linear regression.pdf",
+   "14 Linear regression.pdf"
+  ]
+ },
+ {
+  "id": "fu08",
+  "cat": "followup",
+  "ok": true,
+  "rank": 1,
+  "n": 5,
+  "chars": 10445,
+  "got": [
+   "8 Joint distributions.pdf",
+   "8 Joint distributions.pdf",
+   "8 Joint distributions.pdf",
+   "8 Joint distributions",
+   "7 Continuous RVs.pdf"
+  ]
+ },
+ {
+  "id": "off01",
+  "cat": "offtopic",
+  "ok": true,
+  "rank": null,
+  "n": 0,
+  "chars": 0,
+  "got": []
+ },
+ {
+  "id": "off02",
+  "cat": "offtopic",
+  "ok": true,
+  "rank": null,
+  "n": 0,
+  "chars": 0,
+  "got": []
+ },
+ {
+  "id": "off03",
+  "cat": "offtopic",
+  "ok": true,
+  "rank": null,
+  "n": 0,
+  "chars": 0,
+  "got": []
+ },
+ {
+  "id": "grt01",
+  "cat": "greeting",
+  "ok": true,
+  "rank": null,
+  "n": 0,
+  "chars": 0,
+  "got": []
+ }
+]

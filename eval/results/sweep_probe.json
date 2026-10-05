@@ -1,0 +1,1261 @@
+[
+ {
+  "id": "t01",
+  "cat": "topic",
+  "expect": [
+   "3 Conditional probability.pdf",
+   "3 Conditional probability"
+  ],
+  "q": "how do I know when to use Bayes' theorem instead of just conditional probability",
+  "hits": [
+   [
+    "3 Conditional probability.pdf",
+    0.5906
+   ],
+   [
+    "3 Conditional probability.pdf",
+    0.5113
+   ],
+   [
+    "3 Conditional probability.pdf",
+    0.5096
+   ],
+   [
+    "3 Conditional probability",
+    0.5046
+   ],
+   [
+    "3 Conditional probability.pdf",
+    0.4886
+   ]
+  ]
+ },
+ {
+  "id": "t02",
+  "cat": "topic",
+  "expect": [
+   "4 Combinatorics.pdf",
+   "4 Combinatorics"
+  ],
+  "q": "when does order matter, combinations or permutations",
+  "hits": [
+   [
+    "4 Combinatorics.pdf",
+    0.5482
+   ],
+   [
+    "4 Combinatorics.pdf",
+    0.495
+   ],
+   [
+    "4 Combinatorics.pdf",
+    0.474
+   ],
+   [
+    "4 Combinatorics",
+    0.4615
+   ],
+   [
+    "4 Combinatorics.pdf",
+    0.4476
+   ]
+  ]
+ },
+ {
+  "id": "t03",
+  "cat": "topic",
+  "expect": [
+   "5 Discrete RVs.pdf",
+   "5 Discrete RVs"
+  ],
+  "q": "what exactly is a probability mass function",
+  "hits": [
+   [
+    "7 Continuous RVs",
+    0.4946
+   ],
+   [
+    "7 Continuous RVs",
+    0.4774
+   ],
+   [
+    "8 Joint distributions",
+    0.454
+   ],
+   [
+    "5 Discrete RVs",
+    0.4529
+   ],
+   [
+    "8 Joint distributions",
+    0.4345
+   ]
+  ]
+ },
+ {
+  "id": "t04",
+  "cat": "topic",
+  "expect": [
+   "6 Properties of discrete RVs.pdf",
+   "6 Properties of discrete RVs"
+  ],
+  "q": "how do you compute the variance of a discrete random variable",
+  "hits": [
+   [
+    "6 Properties of discrete RVs.pdf",
+    0.6185
+   ],
+   [
+    "6 Properties of discrete RVs.pdf",
+    0.5843
+   ],
+   [
+    "6 Properties of discrete RVs",
+    0.5544
+   ],
+   [
+    "6 Properties of discrete RVs",
+    0.5217
+   ],
+   [
+    "6 Properties of discrete RVs.pdf",
+    0.5119
+   ]
+  ]
+ },
+ {
+  "id": "t05",
+  "cat": "topic",
+  "expect": [
+   "7 Continuous RVs.pdf",
+   "7 Continuous RVs"
+  ],
+  "q": "what is the difference between a pdf and a cdf",
+  "hits": [
+   [
+    "7 Continuous RVs.pdf",
+    0.4423
+   ],
+   [
+    "7 Continuous RVs.pdf",
+    0.433
+   ],
+   [
+    "6 Properties of discrete RVs",
+    0.4259
+   ],
+   [
+    "7 Continuous RVs.pdf",
+    0.4104
+   ],
+   [
+    "7 Continuous RVs",
+    0.4082
+   ]
+  ]
+ },
+ {
+  "id": "t06",
+  "cat": "topic",
+  "expect": [
+   "8 Joint distributions.pdf",
+   "8 Joint distributions"
+  ],
+  "q": "how do I get a marginal distribution from a joint distribution",
+  "hits": [
+   [
+    "8 Joint distributions.pdf",
+    0.5621
+   ],
+   [
+    "8 Joint distributions",
+    0.5585
+   ],
+   [
+    "8 Joint distributions.pdf",
+    0.512
+   ],
+   [
+    "8 Joint distributions.pdf",
+    0.5047
+   ],
+   [
+    "HW9.pdf",
+    0.4927
+   ]
+  ]
+ },
+ {
+  "id": "t07",
+  "cat": "topic",
+  "expect": [
+   "9 Statistics and limit theorems.pdf",
+   "9 Statistics and limit theorems"
+  ],
+  "q": "what does the central limit theorem actually say",
+  "hits": [
+   [
+    "9 Statistics and limit theorems.pdf",
+    0.5053
+   ],
+   [
+    "9 Statistics and limit theorems",
+    0.5007
+   ],
+   [
+    "9 Statistics and limit theorems",
+    0.4761
+   ],
+   [
+    "9 Statistics and limit theorems",
+    0.4599
+   ],
+   [
+    "9 Statistics and limit theorems.pdf",
+    0.4552
+   ]
+  ]
+ },
+ {
+  "id": "t08",
+  "cat": "topic",
+  "expect": [
+   "10 Point estimation.pdf",
+   "10 Point estimation"
+  ],
+  "q": "what makes an estimator unbiased",
+  "hits": [
+   [
+    "10 Point estimation",
+    0.5904
+   ],
+   [
+    "10 Point estimation.pdf",
+    0.5797
+   ],
+   [
+    "10 Point estimation",
+    0.5629
+   ],
+   [
+    "10 Point estimation.pdf",
+    0.5286
+   ],
+   [
+    "10 Point estimation.pdf",
+    0.5274
+   ]
+  ]
+ },
+ {
+  "id": "t09",
+  "cat": "topic",
+  "expect": [
+   "11 Confidence intervals.pdf",
+   "11 Confidence intervals"
+  ],
+  "q": "what does a 95 percent confidence interval actually mean",
+  "hits": [
+   [
+    "11 Confidence intervals",
+    0.5482
+   ],
+   [
+    "11 Confidence intervals.pdf",
+    0.512
+   ],
+   [
+    "11 Confidence intervals",
+    0.507
+   ],
+   [
+    "11 Confidence intervals.pdf",
+    0.4924
+   ],
+   [
+    "11 Confidence intervals.pdf",
+    0.4767
+   ]
+  ]
+ },
+ {
+  "id": "t10",
+  "cat": "topic",
+  "expect": [
+   "12 Monte Carlo simulation.pdf",
+   "12 Monte Carlo simulation"
+  ],
+  "q": "how does Monte Carlo simulation estimate a probability",
+  "hits": [
+   [
+    "12 Monte Carlo simulation.pdf",
+    0.5617
+   ],
+   [
+    "12 Monte Carlo simulation.pdf",
+    0.5572
+   ],
+   [
+    "12 Monte Carlo simulation.pdf",
+    0.5443
+   ],
+   [
+    "12 Monte Carlo simulation",
+    0.492
+   ],
+   [
+    "12 Monte Carlo simulation",
+    0.492
+   ]
+  ]
+ },
+ {
+  "id": "t11",
+  "cat": "topic",
+  "expect": [
+   "13 Hypothesis testing.pdf",
+   "13 Hypothesis testing"
+  ],
+  "q": "what is the null hypothesis and how do I choose it",
+  "hits": [
+   [
+    "13 Hypothesis testing.pdf",
+    0.5694
+   ],
+   [
+    "13 Hypothesis testing.pdf",
+    0.5557
+   ],
+   [
+    "13 Hypothesis testing.pdf",
+    0.5435
+   ],
+   [
+    "13 Hypothesis testing",
+    0.5013
+   ],
+   [
+    "13 Hypothesis testing",
+    0.4936
+   ]
+  ]
+ },
+ {
+  "id": "t12",
+  "cat": "topic",
+  "expect": [
+   "14 Linear regression.pdf",
+   "14 Linear regression"
+  ],
+  "q": "how are the least squares coefficients derived for a straight line fit",
+  "hits": [
+   [
+    "14 Linear regression",
+    0.5504
+   ],
+   [
+    "14 Linear regression.pdf",
+    0.5436
+   ],
+   [
+    "14 Linear regression.pdf",
+    0.5287
+   ],
+   [
+    "14 Linear regression",
+    0.4963
+   ],
+   [
+    "14 Linear regression",
+    0.4884
+   ]
+  ]
+ },
+ {
+  "id": "t13",
+  "cat": "topic",
+  "expect": [
+   "1 Orientation and descriptive statistics.pdf",
+   "1 Orientation and descriptive statistics"
+  ],
+  "q": "when should I report the median instead of the mean",
+  "hits": [
+   [
+    "1 Orientation and descriptive statistics",
+    0.4831
+   ],
+   [
+    "1 Orientation and descriptive statistics",
+    0.4416
+   ],
+   [
+    "7 Continuous RVs",
+    0.4196
+   ],
+   [
+    "1 Orientation and descriptive statistics.pdf",
+    0.3964
+   ],
+   [
+    "1 Orientation and descriptive statistics",
+    0.3893
+   ]
+  ]
+ },
+ {
+  "id": "t14",
+  "cat": "topic",
+  "expect": [
+   "2 Fundamentals of probability.pdf",
+   "2 Fundamentals of probability"
+  ],
+  "q": "what are the axioms of probability",
+  "hits": [
+   [
+    "2 Fundamentals of probability.pdf",
+    0.6285
+   ],
+   [
+    "2 Fundamentals of probability",
+    0.6075
+   ],
+   [
+    "2 Fundamentals of probability",
+    0.5987
+   ],
+   [
+    "2 Fundamentals of probability.pdf",
+    0.5704
+   ],
+   [
+    "2 Fundamentals of probability",
+    0.556
+   ]
+  ]
+ },
+ {
+  "id": "t15",
+  "cat": "topic",
+  "expect": [
+   "5 Discrete RVs.pdf",
+   "5 Discrete RVs",
+   "6 Properties of discrete RVs.pdf",
+   "6 Properties of discrete RVs"
+  ],
+  "q": "when is the binomial distribution the right model",
+  "hits": [
+   [
+    "5 Discrete RVs.pdf",
+    0.5851
+   ],
+   [
+    "5 Discrete RVs.pdf",
+    0.5668
+   ],
+   [
+    "5 Discrete RVs.pdf",
+    0.5585
+   ],
+   [
+    "5 Discrete RVs.pdf",
+    0.5523
+   ],
+   [
+    "5 Discrete RVs",
+    0.5341
+   ]
+  ]
+ },
+ {
+  "id": "t16",
+  "cat": "topic",
+  "expect": [
+   "7 Continuous RVs.pdf",
+   "7 Continuous RVs"
+  ],
+  "q": "how do I standardize a normal random variable to use the z table",
+  "hits": [
+   [
+    "7 Continuous RVs.pdf",
+    0.5492
+   ],
+   [
+    "7 Continuous RVs",
+    0.5316
+   ],
+   [
+    "7 Continuous RVs.pdf",
+    0.5287
+   ],
+   [
+    "7 Continuous RVs",
+    0.517
+   ],
+   [
+    "7 Continuous RVs",
+    0.498
+   ]
+  ]
+ },
+ {
+  "id": "t17",
+  "cat": "topic",
+  "expect": [
+   "5 Discrete RVs.pdf",
+   "5 Discrete RVs",
+   "6 Properties of discrete RVs.pdf",
+   "6 Properties of discrete RVs"
+  ],
+  "q": "what is the Poisson distribution used for",
+  "hits": [
+   [
+    "5 Discrete RVs.pdf",
+    0.5577
+   ],
+   [
+    "5 Discrete RVs",
+    0.5574
+   ],
+   [
+    "5 Discrete RVs",
+    0.5512
+   ],
+   [
+    "5 Discrete RVs.pdf",
+    0.5353
+   ],
+   [
+    "5 Discrete RVs",
+    0.4922
+   ]
+  ]
+ },
+ {
+  "id": "t18",
+  "cat": "topic",
+  "expect": [
+   "2 Fundamentals of probability.pdf",
+   "2 Fundamentals of probability",
+   "3 Conditional probability.pdf",
+   "3 Conditional probability"
+  ],
+  "q": "what does it mean for two events to be independent",
+  "hits": [
+   [
+    "3 Conditional probability",
+    0.5828
+   ],
+   [
+    "3 Conditional probability",
+    0.5407
+   ],
+   [
+    "5 Discrete RVs",
+    0.5167
+   ],
+   [
+    "3 Conditional probability.pdf",
+    0.5041
+   ],
+   [
+    "5 Discrete RVs",
+    0.4716
+   ]
+  ]
+ },
+ {
+  "id": "hw01",
+  "cat": "named_hw",
+  "expect": [
+   "HW3.pdf"
+  ],
+  "q": "what is HW3 asking me to do",
+  "hits": [
+   [
+    "HW3.pdf",
+    0.4251
+   ],
+   [
+    "HW8.pdf",
+    0.4142
+   ],
+   [
+    "HW4.pdf",
+    0.4115
+   ],
+   [
+    "HW6.pdf",
+    0.4098
+   ],
+   [
+    "HW2.pdf",
+    0.3926
+   ]
+  ]
+ },
+ {
+  "id": "hw02",
+  "cat": "named_hw",
+  "expect": [
+   "HW5.pdf"
+  ],
+  "q": "I'm stuck on homework 5",
+  "hits": [
+   [
+    "HW5.pdf",
+    0.4616
+   ],
+   [
+    "HW8.pdf",
+    0.4416
+   ],
+   [
+    "HW6.pdf",
+    0.4314
+   ],
+   [
+    "HW4.pdf",
+    0.4271
+   ],
+   [
+    "HW9.pdf",
+    0.4159
+   ]
+  ]
+ },
+ {
+  "id": "hw03",
+  "cat": "named_hw",
+  "expect": [
+   "HW11.pdf"
+  ],
+  "q": "can you explain the setup in HW11",
+  "hits": [
+   [
+    "HW8.pdf",
+    0.4081
+   ],
+   [
+    "HW11.pdf",
+    0.4036
+   ],
+   [
+    "HW6.pdf",
+    0.3985
+   ],
+   [
+    "HW7.pdf",
+    0.3895
+   ],
+   [
+    "HW12.pdf",
+    0.3875
+   ]
+  ]
+ },
+ {
+  "id": "hw04",
+  "cat": "named_hw",
+  "expect": [
+   "Lab 7.pdf"
+  ],
+  "q": "what does Lab 7 want us to simulate",
+  "hits": [
+   [
+    "Syllabus",
+    0.3737
+   ],
+   [
+    "Lab 9.pdf",
+    0.3594
+   ],
+   [
+    "Lab 7.pdf",
+    0.3585
+   ],
+   [
+    "1 Orientation and descriptive statistics.pdf",
+    0.3563
+   ],
+   [
+    "Lab 6.pdf",
+    0.3559
+   ]
+  ]
+ },
+ {
+  "id": "hw05",
+  "cat": "named_hw",
+  "expect": [
+   "HW2.pdf"
+  ],
+  "q": "hw 2 question about sample spaces",
+  "hits": [
+   [
+    "2 Fundamentals of probability.pdf",
+    0.5724
+   ],
+   [
+    "2 Fundamentals of probability.pdf",
+    0.5494
+   ],
+   [
+    "4 Combinatorics.pdf",
+    0.5481
+   ],
+   [
+    "2 Fundamentals of probability",
+    0.5355
+   ],
+   [
+    "2 Fundamentals of probability.pdf",
+    0.5294
+   ]
+  ]
+ },
+ {
+  "id": "hw06",
+  "cat": "named_hw",
+  "expect": [
+   "Lab 12.pdf"
+  ],
+  "q": "Lab 12 instructions",
+  "hits": [
+   [
+    "Lab 13.pdf",
+    0.4292
+   ],
+   [
+    "Lab 12.pdf",
+    0.427
+   ],
+   [
+    "Syllabus",
+    0.4228
+   ],
+   [
+    "Syllabus.pdf",
+    0.4079
+   ],
+   [
+    "Syllabus",
+    0.4056
+   ]
+  ]
+ },
+ {
+  "id": "cur01",
+  "cat": "current_hw",
+  "expect": [
+   "HW9.pdf"
+  ],
+  "q": "what is this week's homework about",
+  "hits": [
+   [
+    "HW8.pdf",
+    0.4105
+   ],
+   [
+    "Syllabus",
+    0.4038
+   ],
+   [
+    "HW1.pdf",
+    0.4
+   ],
+   [
+    "HW6.pdf",
+    0.398
+   ],
+   [
+    "Syllabus",
+    0.3973
+   ]
+  ]
+ },
+ {
+  "id": "cur02",
+  "cat": "current_hw",
+  "expect": [
+   "HW9.pdf"
+  ],
+  "q": "what homework should I be working on right now",
+  "hits": [
+   [
+    "Writing and submission guidelines",
+    0.3595
+   ],
+   [
+    "Syllabus",
+    0.3382
+   ],
+   [
+    "Writing and submission guidelines",
+    0.3301
+   ],
+   [
+    "HW8.pdf",
+    0.3293
+   ],
+   [
+    "HW9.pdf",
+    0.3291
+   ]
+  ]
+ },
+ {
+  "id": "log01",
+  "cat": "logistics",
+  "expect": [
+   "Syllabus",
+   "Syllabus.pdf"
+  ],
+  "q": "how is the final grade weighted in this course",
+  "hits": [
+   [
+    "Syllabus",
+    0.563
+   ],
+   [
+    "Syllabus.pdf",
+    0.5115
+   ],
+   [
+    "1 Orientation and descriptive statistics.pdf",
+    0.5105
+   ],
+   [
+    "Syllabus",
+    0.5056
+   ],
+   [
+    "Syllabus",
+    0.498
+   ]
+  ]
+ },
+ {
+  "id": "log02",
+  "cat": "logistics",
+  "expect": [
+   "Syllabus",
+   "Syllabus.pdf"
+  ],
+  "q": "what is the late submission policy",
+  "hits": [
+   [
+    "Syllabus",
+    0.4736
+   ],
+   [
+    "Syllabus",
+    0.4455
+   ],
+   [
+    "Syllabus.pdf",
+    0.431
+   ],
+   [
+    "Writing and submission guidelines",
+    0.3705
+   ],
+   [
+    "Syllabus.pdf",
+    0.3254
+   ]
+  ]
+ },
+ {
+  "id": "log03",
+  "cat": "logistics",
+  "expect": [
+   "Midterm 1 study guide.pdf",
+   "Syllabus",
+   "Syllabus.pdf"
+  ],
+  "q": "what topics does midterm 1 cover",
+  "hits": [
+   [
+    "Midterm 1 study guide.pdf",
+    0.6128
+   ],
+   [
+    "Midterm 1 study guide.pdf",
+    0.6031
+   ],
+   [
+    "Midterm 2 study guide.pdf",
+    0.5621
+   ],
+   [
+    "Midterm 2 study guide.pdf",
+    0.5495
+   ],
+   [
+    "Final exam study guide.pdf",
+    0.5179
+   ]
+  ]
+ },
+ {
+  "id": "fu01",
+  "cat": "followup",
+  "expect": [
+   "3 Conditional probability.pdf",
+   "3 Conditional probability"
+  ],
+  "q": "when would I actually use Bayes' theorem",
+  "hits": [
+   [
+    "3 Conditional probability.pdf",
+    0.5401
+   ],
+   [
+    "3 Conditional probability",
+    0.5159
+   ],
+   [
+    "3 Conditional probability.pdf",
+    0.5057
+   ],
+   [
+    "3 Conditional probability.pdf",
+    0.4931
+   ],
+   [
+    "3 Conditional probability",
+    0.4654
+   ]
+  ]
+ },
+ {
+  "id": "fu02",
+  "cat": "followup",
+  "expect": [
+   "9 Statistics and limit theorems.pdf",
+   "9 Statistics and limit theorems"
+  ],
+  "q": "how large does n have to be central limit theorem",
+  "hits": [
+   [
+    "9 Statistics and limit theorems",
+    0.5511
+   ],
+   [
+    "9 Statistics and limit theorems.pdf",
+    0.5378
+   ],
+   [
+    "9 Statistics and limit theorems",
+    0.5131
+   ],
+   [
+    "9 Statistics and limit theorems",
+    0.5124
+   ],
+   [
+    "13 Hypothesis testing.pdf",
+    0.5091
+   ]
+  ]
+ },
+ {
+  "id": "fu03",
+  "cat": "followup",
+  "expect": [
+   "11 Confidence intervals.pdf",
+   "11 Confidence intervals"
+  ],
+  "q": "how do I build a confidence interval for the mean when sigma is unknown",
+  "hits": [
+   [
+    "11 Confidence intervals.pdf",
+    0.5501
+   ],
+   [
+    "11 Confidence intervals.pdf",
+    0.5259
+   ],
+   [
+    "11 Confidence intervals.pdf",
+    0.5195
+   ],
+   [
+    "11 Confidence intervals",
+    0.5183
+   ],
+   [
+    "11 Confidence intervals.pdf",
+    0.5167
+   ]
+  ]
+ },
+ {
+  "id": "fu04",
+  "cat": "followup",
+  "expect": [
+   "5 Discrete RVs.pdf",
+   "5 Discrete RVs",
+   "6 Properties of discrete RVs.pdf",
+   "6 Properties of discrete RVs"
+  ],
+  "q": "binomial distribution variance",
+  "hits": [
+   [
+    "6 Properties of discrete RVs.pdf",
+    0.5466
+   ],
+   [
+    "6 Properties of discrete RVs.pdf",
+    0.5288
+   ],
+   [
+    "5 Discrete RVs.pdf",
+    0.5117
+   ],
+   [
+    "6 Properties of discrete RVs",
+    0.5046
+   ],
+   [
+    "5 Discrete RVs",
+    0.4918
+   ]
+  ]
+ },
+ {
+  "id": "fu05",
+  "cat": "followup",
+  "expect": [
+   "HW3.pdf"
+  ],
+  "q": "HW3 problem 2",
+  "hits": [
+   [
+    "HW8.pdf",
+    0.4516
+   ],
+   [
+    "HW3.pdf",
+    0.445
+   ],
+   [
+    "HW6.pdf",
+    0.4442
+   ],
+   [
+    "HW7.pdf",
+    0.4441
+   ],
+   [
+    "HW2.pdf",
+    0.4416
+   ]
+  ]
+ },
+ {
+  "id": "fu06",
+  "cat": "followup",
+  "expect": [
+   "13 Hypothesis testing.pdf",
+   "13 Hypothesis testing"
+  ],
+  "q": "what is a type II error",
+  "hits": [
+   [
+    "13 Hypothesis testing",
+    0.4903
+   ],
+   [
+    "13 Hypothesis testing",
+    0.4745
+   ],
+   [
+    "13 Hypothesis testing",
+    0.4562
+   ],
+   [
+    "13 Hypothesis testing.pdf",
+    0.4204
+   ],
+   [
+    "13 Hypothesis testing",
+    0.4114
+   ]
+  ]
+ },
+ {
+  "id": "fu07",
+  "cat": "followup",
+  "expect": [
+   "14 Linear regression.pdf",
+   "14 Linear regression"
+  ],
+  "q": "how to check whether a linear regression fits well coefficient of determination",
+  "hits": [
+   [
+    "14 Linear regression",
+    0.5483
+   ],
+   [
+    "14 Linear regression.pdf",
+    0.4675
+   ],
+   [
+    "14 Linear regression.pdf",
+    0.4576
+   ],
+   [
+    "14 Linear regression.pdf",
+    0.422
+   ],
+   [
+    "14 Linear regression.pdf",
+    0.4137
+   ]
+  ]
+ },
+ {
+  "id": "fu08",
+  "cat": "followup",
+  "expect": [
+   "8 Joint distributions.pdf",
+   "8 Joint distributions"
+  ],
+  "q": "conditional distributions",
+  "hits": [
+   [
+    "8 Joint distributions.pdf",
+    0.5103
+   ],
+   [
+    "8 Joint distributions.pdf",
+    0.5102
+   ],
+   [
+    "8 Joint distributions.pdf",
+    0.5076
+   ],
+   [
+    "8 Joint distributions",
+    0.4963
+   ],
+   [
+    "7 Continuous RVs.pdf",
+    0.493
+   ]
+  ]
+ },
+ {
+  "id": "off01",
+  "cat": "offtopic",
+  "expect": [],
+  "q": "what is the capital of France",
+  "hits": [
+   [
+    "11 Confidence intervals",
+    0.0912
+   ],
+   [
+    "HW5.pdf",
+    0.0815
+   ],
+   [
+    "HW1.pdf",
+    0.0679
+   ],
+   [
+    "Lab 2.pdf",
+    0.0658
+   ],
+   [
+    "10 Point estimation.pdf",
+    0.0639
+   ]
+  ]
+ },
+ {
+  "id": "off02",
+  "cat": "offtopic",
+  "expect": [],
+  "q": "explain how photosynthesis works",
+  "hits": [
+   [
+    "Lab 10.pdf",
+    0.1214
+   ],
+   [
+    "14 Linear regression.pdf",
+    0.1113
+   ],
+   [
+    "3 Conditional probability.pdf",
+    0.1093
+   ],
+   [
+    "Writing and submission guidelines",
+    0.1081
+   ],
+   [
+    "3 Conditional probability.pdf",
+    0.1001
+   ]
+  ]
+ },
+ {
+  "id": "off03",
+  "cat": "offtopic",
+  "expect": [],
+  "q": "how does Newton's method find a root of a function",
+  "hits": [
+   [
+    "HW1.pdf",
+    0.2632
+   ],
+   [
+    "14 Linear regression.pdf",
+    0.2309
+   ],
+   [
+    "12 Monte Carlo simulation.pdf",
+    0.2281
+   ],
+   [
+    "12 Monte Carlo simulation",
+    0.2199
+   ],
+   [
+    "7 Continuous RVs",
+    0.2196
+   ]
+  ]
+ },
+ {
+  "id": "grt01",
+  "cat": "greeting",
+  "expect": [],
+  "q": "hi",
+  "hits": [
+   [
+    "1 Orientation and descriptive statistics.pdf",
+    0.1777
+   ],
+   [
+    "8 Joint distributions.pdf",
+    0.1657
+   ],
+   [
+    "8 Joint distributions.pdf",
+    0.1551
+   ],
+   [
+    "1 Orientation and descriptive statistics",
+    0.1527
+   ],
+   [
+    "8 Joint distributions.pdf",
+    0.1519
+   ]
+  ]
+ }
+]

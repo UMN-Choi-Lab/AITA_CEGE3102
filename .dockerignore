@@ -27,3 +27,6 @@ docs/
 
 # Fly config (consumed by flyctl on the host, not needed inside the image)
 fly.toml
+
+# Rollback snapshots of the index must never enter the build context
+faiss_db.*backup*/

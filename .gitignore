@@ -45,3 +45,6 @@ CLAUDE.md
 # + usernames. The generator (monitoring/weekly_report.py) IS tracked.
 monitoring/*.md
 monitoring/cron.log
+
+# Index rollback snapshots (faiss_db.vertex-backup-*/ etc.): large, regenerable, never committed
+faiss_db.*backup*/

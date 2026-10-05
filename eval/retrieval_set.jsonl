@@ -1,0 +1,41 @@
+{"id": "t01", "cat": "topic", "q": "how do I know when to use Bayes' theorem instead of just conditional probability", "expect": ["3 Conditional probability.pdf", "3 Conditional probability"]}
+{"id": "t02", "cat": "topic", "q": "when does order matter, combinations or permutations", "expect": ["4 Combinatorics.pdf", "4 Combinatorics"]}
+{"id": "t03", "cat": "topic", "q": "what exactly is a probability mass function", "expect": ["5 Discrete RVs.pdf", "5 Discrete RVs"]}
+{"id": "t04", "cat": "topic", "q": "how do you compute the variance of a discrete random variable", "expect": ["6 Properties of discrete RVs.pdf", "6 Properties of discrete RVs"]}
+{"id": "t05", "cat": "topic", "q": "what is the difference between a pdf and a cdf", "expect": ["7 Continuous RVs.pdf", "7 Continuous RVs"]}
+{"id": "t06", "cat": "topic", "q": "how do I get a marginal distribution from a joint distribution", "expect": ["8 Joint distributions.pdf", "8 Joint distributions"]}
+{"id": "t07", "cat": "topic", "q": "what does the central limit theorem actually say", "expect": ["9 Statistics and limit theorems.pdf", "9 Statistics and limit theorems"]}
+{"id": "t08", "cat": "topic", "q": "what makes an estimator unbiased", "expect": ["10 Point estimation.pdf", "10 Point estimation"]}
+{"id": "t09", "cat": "topic", "q": "what does a 95 percent confidence interval actually mean", "expect": ["11 Confidence intervals.pdf", "11 Confidence intervals"]}
+{"id": "t10", "cat": "topic", "q": "how does Monte Carlo simulation estimate a probability", "expect": ["12 Monte Carlo simulation.pdf", "12 Monte Carlo simulation"]}
+{"id": "t11", "cat": "topic", "q": "what is the null hypothesis and how do I choose it", "expect": ["13 Hypothesis testing.pdf", "13 Hypothesis testing"]}
+{"id": "t12", "cat": "topic", "q": "how are the least squares coefficients derived for a straight line fit", "expect": ["14 Linear regression.pdf", "14 Linear regression"]}
+{"id": "t13", "cat": "topic", "q": "when should I report the median instead of the mean", "expect": ["1 Orientation and descriptive statistics.pdf", "1 Orientation and descriptive statistics"]}
+{"id": "t14", "cat": "topic", "q": "what are the axioms of probability", "expect": ["2 Fundamentals of probability.pdf", "2 Fundamentals of probability"]}
+{"id": "t15", "cat": "topic", "q": "when is the binomial distribution the right model", "expect": ["5 Discrete RVs.pdf", "5 Discrete RVs", "6 Properties of discrete RVs.pdf", "6 Properties of discrete RVs"]}
+{"id": "t16", "cat": "topic", "q": "how do I standardize a normal random variable to use the z table", "expect": ["7 Continuous RVs.pdf", "7 Continuous RVs"]}
+{"id": "t17", "cat": "topic", "q": "what is the Poisson distribution used for", "expect": ["5 Discrete RVs.pdf", "5 Discrete RVs", "6 Properties of discrete RVs.pdf", "6 Properties of discrete RVs"]}
+{"id": "t18", "cat": "topic", "q": "what does it mean for two events to be independent", "expect": ["2 Fundamentals of probability.pdf", "2 Fundamentals of probability", "3 Conditional probability.pdf", "3 Conditional probability"]}
+{"id": "hw01", "cat": "named_hw", "q": "what is HW3 asking me to do", "expect": ["HW3.pdf"]}
+{"id": "hw02", "cat": "named_hw", "q": "I'm stuck on homework 5", "expect": ["HW5.pdf"]}
+{"id": "hw03", "cat": "named_hw", "q": "can you explain the setup in HW11", "expect": ["HW11.pdf"]}
+{"id": "hw04", "cat": "named_hw", "q": "what does Lab 7 want us to simulate", "expect": ["Lab 7.pdf"]}
+{"id": "hw05", "cat": "named_hw", "q": "hw 2 question about sample spaces", "expect": ["HW2.pdf"]}
+{"id": "hw06", "cat": "named_hw", "q": "Lab 12 instructions", "expect": ["Lab 12.pdf"]}
+{"id": "cur01", "cat": "current_hw", "q": "what is this week's homework about", "expect": ["HW9.pdf"]}
+{"id": "cur02", "cat": "current_hw", "q": "what homework should I be working on right now", "expect": ["HW9.pdf"]}
+{"id": "log01", "cat": "logistics", "q": "how is the final grade weighted in this course", "expect": ["Syllabus", "Syllabus.pdf"]}
+{"id": "log02", "cat": "logistics", "q": "what is the late submission policy", "expect": ["Syllabus", "Syllabus.pdf"]}
+{"id": "log03", "cat": "logistics", "q": "what topics does midterm 1 cover", "expect": ["Midterm 1 study guide.pdf", "Syllabus", "Syllabus.pdf"]}
+{"id": "fu01", "cat": "followup", "q": "and when would I actually use it", "expect": ["3 Conditional probability.pdf", "3 Conditional probability"], "history": [{"role": "user", "content": "can you explain Bayes theorem"}, {"role": "assistant", "content": "Bayes' theorem relates P(A|B) to P(B|A) through the prior P(A). What do you already know about conditional probability?"}]}
+{"id": "fu02", "cat": "followup", "q": "how large does n have to be", "expect": ["9 Statistics and limit theorems.pdf", "9 Statistics and limit theorems"], "history": [{"role": "user", "content": "I don't get the central limit theorem"}, {"role": "assistant", "content": "The CLT says the sampling distribution of the mean approaches a normal shape as the sample size grows. Which part is unclear?"}]}
+{"id": "fu03", "cat": "followup", "q": "what if sigma is unknown", "expect": ["11 Confidence intervals.pdf", "11 Confidence intervals"], "history": [{"role": "user", "content": "how do I build a confidence interval for the mean"}, {"role": "assistant", "content": "Start from the sampling distribution of the sample mean. What do you know about the standard error?"}]}
+{"id": "fu04", "cat": "followup", "q": "what's its variance", "expect": ["5 Discrete RVs.pdf", "5 Discrete RVs", "6 Properties of discrete RVs.pdf", "6 Properties of discrete RVs"], "history": [{"role": "user", "content": "remind me about the binomial distribution"}, {"role": "assistant", "content": "The binomial counts successes in n independent identical trials. What is its expected value?"}]}
+{"id": "fu05", "cat": "followup", "q": "problem 2", "expect": ["HW3.pdf"], "history": [{"role": "user", "content": "I need help with HW3"}, {"role": "assistant", "content": "Happy to help you think through it. Which problem are you working on?"}]}
+{"id": "fu06", "cat": "followup", "q": "what about a type II error", "expect": ["13 Hypothesis testing.pdf", "13 Hypothesis testing"], "history": [{"role": "user", "content": "what is a type I error"}, {"role": "assistant", "content": "A type I error is rejecting a true null hypothesis. What do you think the complementary mistake would be?"}]}
+{"id": "fu07", "cat": "followup", "q": "show me how", "expect": ["14 Linear regression.pdf", "14 Linear regression"], "history": [{"role": "user", "content": "how do I check whether a linear regression fits well"}, {"role": "assistant", "content": "One common summary is the coefficient of determination. What does it measure?"}]}
+{"id": "fu08", "cat": "followup", "q": "the second one", "expect": ["8 Joint distributions.pdf", "8 Joint distributions"], "history": [{"role": "user", "content": "what is the difference between marginal and conditional distributions"}, {"role": "assistant", "content": "A marginal collapses one variable out; a conditional fixes one variable's value. Which would you like to work through?"}]}
+{"id": "off01", "cat": "offtopic", "q": "what is the capital of France", "expect": []}
+{"id": "off02", "cat": "offtopic", "q": "explain how photosynthesis works", "expect": []}
+{"id": "off03", "cat": "offtopic", "q": "how does Newton's method find a root of a function", "expect": []}
+{"id": "grt01", "cat": "greeting", "q": "hi", "expect": [], "history": [{"role": "user", "content": "thanks that helped"}, {"role": "assistant", "content": "Glad it helped. Anything else you want to work through?"}]}
